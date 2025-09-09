@@ -19,15 +19,15 @@
 - ❌ Verificar con `netstat` que los puertos estén en LISTENING
 
 ## D. Probar el broker por consola (TCP 1883)
-- ❌ Suscriptor:  
+- ✅ Suscriptor:  
   ```bash
   mosquitto_sub -h 127.0.0.1 -p 1883 -u appuser -P TU_CLAVE -t "test/#" -v
   ```
-- ❌ Publicador:  
+- ✅ Publicador:  
   ```bash
   mosquitto_pub -h 127.0.0.1 -p 1883 -u appuser -P TU_CLAVE -t "test/uno" -m "hola mqtt"
   ```
-- ❌ Confirmar que el suscriptor ve el mensaje.
+- ✅ Confirmar que el suscriptor ve el mensaje.
 
 ## E. Crear proyecto Flutter (VS Code)
 - ❌ `flutter create greenhouse_mqtt`
@@ -56,9 +56,14 @@
 - ❌ `greenhouse/1/actuator/lamp/set` → `ON`/`OFF`
 - ❌ `greenhouse/1/actuator/lamp/state` → retain: `ON`/`OFF`
 
-## J. Definition of Done
+## J. Definition of Dond
 - ❌ Mosquitto funciona en **1883**
 - ❌ `netstat` muestra **1883** y **9001** en LISTENING
 - ❌ La app Flutter conecta a `ws://IP_PC:9001`
 - ❌ El ESP32 publica estados retenidos (`status` y `lamp/state`)
 - ❌ El celular ve inmediatamente `status = online` al conectar
+
+## K. Implementaciones Futuras
+- ❌ Resultados diarios por WhatsApp
+
+
